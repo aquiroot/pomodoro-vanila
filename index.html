@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Pomodoro Vanila JS</title>
+	</head>
+	<body>
+		<section class="container">
+			<h1>Pomodoro Vanilla JS</h1>
+			<div class="state__box">
+				<h3 id="state">Press start button</h3>
+			</div>
+			<div class="circle">
+				<div class="counter">
+					<h4>
+						<span id="min">min</span>
+						:
+						<span id="sec">sec</span>
+					</h4>
+				</div>
+			</div>
+			<button id="startBtn">Start</button>
+			<img src="./assets/settings.png" alt="settings" id="settings" />
+		</section>
+		<div
+			class="modal__settings"
+			style="visibility: hidden"
+			id="modal__settings"
+		>
+			<h5>Choose time to work and chat</h5>
+			<div>
+				<div class="options">
+					<h6>Work:</h6>
+					<input type="number" value="20" min="1" max="60" />
+					<h6>minutes.</h6>
+				</div>
+				<div class="options">
+					<h6>Chat:</h6>
+					<input type="number" value="5" min="1" max="60" />
+					<h6>minutes.</h6>
+				</div>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
