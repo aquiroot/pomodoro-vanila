@@ -6,6 +6,7 @@ const minutes = document.querySelector('#min');
 const seconds = document.querySelector('#sec');
 const inputWork = document.querySelector('#inputWork');
 const inputChat = document.querySelector('#inputChat');
+const dong = new Audio('./assets/dong.mp3');
 
 let defaultWorkLeft = 19;
 let defaultChatLeft = 4;
@@ -36,11 +37,13 @@ const countDown = () => {
 				if (minutesLeft === 0) {
 					if (isWork) {
 						isWork = false;
+						dong.play();
 						state.innerHTML = 'Chat and enjoy!';
 						minutesLeft = defaultChatLeft;
 						secondLeft = 59;
 					} else {
 						isWork = true;
+						dong.play();
 						state.innerHTML = 'Work time!';
 						minutesLeft = defaultWorkLeft;
 						secondLeft = 59;
@@ -50,7 +53,6 @@ const countDown = () => {
 					secondLeft = 59;
 				}
 			} else {
-				console.log(minutesLeft);
 				minutes.innerHTML =
 					minutesLeft < 10 ? '0' + minutesLeft.toString() : minutesLeft;
 				seconds.innerHTML =

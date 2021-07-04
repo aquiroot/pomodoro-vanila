@@ -37,14 +37,14 @@ h6 {
 	font-weight: 600;
 }
 
-#settings {
+img {
 	margin: 20px;
 	width: 30px;
 	cursor: pointer;
 	transition: all 0.2s ease;
 }
 
-#settings:hover {
+img:hover {
 	box-shadow: 0px 0px 9px -2px var(--light-grey);
 	border-radius: 100%;
 }
